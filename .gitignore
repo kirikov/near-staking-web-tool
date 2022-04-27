@@ -2,3 +2,6 @@
 contract/src/lib.rs
 src/test.js
 src/test-setup.js
+./node_modules/*
+./dist/*
+./mainnet/*

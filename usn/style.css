@@ -1,11 +1,169 @@
+@font-face {
+    font-family: BwSeidoRound;
+    src: url(./fonts/389947_6_0.eot);
+    src: url(./fonts/389947_6_0.eot?#iefix) format("embedded-opentype"), url(./fonts/389947_6_0.woff2) format("woff2"), url(./fonts/389947_6_0.woff) format("woff"), url(./fonts/389947_6_0.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Eksell Display';
+    src: url(./fonts/EksellDisplaySubset.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal
+}
+
+input, button, select, textarea {
+  outline: 0;
+  -webkit-appearance: none;
+}
+
 body {
-    background: #eef2fe;
-    font-family: BwSeidoRound, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    background: #FEFDEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Eksell Display', -apple-system, BlinkMacSystemFont, 'Roboto',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
 
-html, body { height: 100%;}
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #FEFDEE;
+    padding: 0;
+    margin: 0;
+}
+
+.swap-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 430px;
+}
+
+.swap-form__title {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 58px;
+    margin-bottom: 20px;
+}
+
+.swap-form__input-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 13px;
+}
+
+.swap-form__input-load-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.swap-form__input-load-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 101px;
+    height: 51px;
+    border: 2px solid #2A2A34;
+    margin-left: 15px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.swap-form__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 310px;
+    height: 55px;
+    background: #FEFDEE;
+    border: 1px solid #2A2B34;
+    padding-left: 20px;
+}
+
+.swap-form__balance-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.swap-form__balance {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    width: 290px;
+    height: 55px;
+    background: #FEFDEE;
+    border: 1px solid #2A2B34;
+    padding-left: 20px
+}
+
+.swap-form__balance-number {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    position: absolute;
+    right: 20px;
+}
+
+.swap-form__balance-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 105px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.swap-form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #C1B583;
+    width: 306px;
+    height: 55px;
+    background: #2A2A34;
+    border: 2px solid #C1B582;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
 
 body > footer {
   position: sticky;
@@ -143,14 +301,6 @@ table.dataTable tfoot th, table.dataTable tfoot td {
     background: linear-gradient(-45deg, rgba(0, 0, 0, 0) 49.9%, #fbdde2 49.9%, #fbdde2 10%, rgba(0, 0, 0, 0) 60%) fixed,
     linear-gradient(-45deg, #fbdde2 5%, rgba(0, 0, 0, 0) 5%) fixed !important;
     background-size: 0.5em 0.5em !important
-}
-
-@font-face {
-    font-family: BwSeidoRound;
-    src: url(./fonts/389947_6_0.eot);
-    src: url(./fonts/389947_6_0.eot?#iefix) format("embedded-opentype"), url(./fonts/389947_6_0.woff2) format("woff2"), url(./fonts/389947_6_0.woff) format("woff"), url(./fonts/389947_6_0.ttf) format("truetype");
-    font-weight: 500;
-    font-style: normal
 }
 
 
