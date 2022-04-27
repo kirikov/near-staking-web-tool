@@ -5,3 +5,5 @@ src/test-setup.js
 ./node_modules/*
 ./dist/*
 ./mainnet/*
+node_modules
+.cache

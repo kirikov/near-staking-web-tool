@@ -18,24 +18,26 @@
                 id="usn-account-id"
                 placeholder="Your NEAR account"
             >
-            <div class="swap-form__input-load-button">Load</div>
+            <div class="swap-form__input-load-button" id="usn-check-button">Load</div>
         </div>
-        <div class="swap-form__balance-container">
-            <div class="swap-form__balance">
-                Balance $
-                <div class="swap-form__balance-number">100</div>
+        <div id="check-usn-found" class="hidden">
+            <div class="swap-form__balance-container" >
+                <div class="swap-form__balance">
+                    Balance $
+                    <input type="text" id="usn-amount" class="swap-form__balance-number" value="100">
+                </div>
+                <div class="swap-form__balance-icon"><img class="swap-form__balance-usn-img" src="img/USN_icon.png" alt="USN"></div>
             </div>
-            <div class="swap-form__balance-icon">USN</div>
-        </div>
-        <div class="swap-form__button">Swap USN to NEAR</div>
-        <div class="swap-form__balance-container">
-            <div class="swap-form__balance">
-                Balance $
-                <div class="swap-form__balance-number">100000000</div>
+            <div id="usn-unwrap-button" class="swap-form__button">Swap USN to NEAR</div>
+            <div class="swap-form__balance-container">
+                <div class="swap-form__balance">
+                    Balance $
+                    <input type="text" id="usn-near-amount" class="swap-form__balance-number" value="100000000">
+                </div>
+                <div class="swap-form__balance-icon"><img class="swap-form__balance-near-img" src="img/NEAR_icon.png" alt="NEAR"></div>
             </div>
-            <div class="swap-form__balance-icon">NEAR</div>
+            <div id="usn-wrap-button" class="swap-form__button">Swap NEAR to USN</div>
         </div>
-        <div class="swap-form__button">Swap NEAR to USN</div>
     </div>
 
 
@@ -45,30 +47,6 @@
 
     <div class="alert alert-warning hidden claim-alert" role="alert" id="check-usn-error">
         Data not found
-    </div>
-
-    <div id="check-usn-found" class="hidden">
-        <div class="alert alert-success claim-alert" role="alert">
-            <div>
-                Balance: $<input type="text" id="usn-amount" style="width: 90px"/> USN
-            </div>
-            <div class="link-button-container hidden" id="usn-unwrap-button" >
-                <a href="#" class="link-button">
-                    Swap USN to NEAR
-                </a>
-            </div>
-        </div>
-
-        <div class="alert alert-success claim-alert" role="alert">
-            <div>
-                Balance: $<input type="text" id="usn-near-amount" style="width: 90px"/> NEAR
-            </div>
-            <div class="link-button-container hidden" id="usn-wrap-button">
-                <a href="#" class="link-button">
-                    Swap NEAR to USN
-                </a>
-            </div>
-        </div>
     </div>
 
     <script src="usn.js"></script>

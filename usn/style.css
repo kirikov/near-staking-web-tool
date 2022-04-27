@@ -135,6 +135,9 @@ html, body {
     line-height: 22px;
     position: absolute;
     right: 20px;
+    background: transparent;
+    border: none;
+    text-align: right;
 }
 
 .swap-form__balance-icon {
@@ -143,8 +146,19 @@ html, body {
     align-items: center;
     width: 105px;
     margin-left: 15px;
-    cursor: pointer;
+    cursor: pointer;    
 }
+
+.swap-form__balance-usn-img {
+    width: 68px;
+    height: 28px;
+}
+
+.swap-form__balance-near-img {
+    width: 78px;
+    height: 28px;
+}
+
 
 .swap-form__button {
     display: flex;
